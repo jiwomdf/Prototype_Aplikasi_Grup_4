@@ -24,7 +24,6 @@ class ReservationActivity : BaseActivity(), TextWatcher {
         val PLACE_NAME = "place_name"
     }
 
-
     private var arrValidation = arrayOf(false, false, false, false, false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -140,10 +139,15 @@ class ReservationActivity : BaseActivity(), TextWatcher {
                     arrValidation[0] = true
             }
             et_phoneNumber.text.hashCode() -> {
-                if (et_phoneNumber.text.toString().length < 9) {
+                if (et_phoneNumber.text.toString().length > 2 && et_phoneNumber.text.toString().substring(0,2) != "08") {
+                    et_phoneNumber.error = "phone number must start with 08"
+                    arrValidation[1] = false
+                }
+                else if (et_phoneNumber.text.toString().length < 9) {
                     et_phoneNumber.error = "phone number is less than 9"
                     arrValidation[1] = false
-                } else
+                }
+                else
                     arrValidation[1] = true
             }
             et_numberGuest.text.hashCode() -> {

@@ -6,6 +6,8 @@ import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_register.*
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 class RegisterActivity : BaseActivity(), TextWatcher {
 
@@ -57,8 +59,8 @@ class RegisterActivity : BaseActivity(), TextWatcher {
                     et_email.error = "email is less than 2"
                     arrValidation[1] = false
                 }
-                else if(!et_email.text.toString().contains("@")){
-                    et_email.error = "email must have @"
+                else if(!emailValidator(et_email.text.toString())){
+                    et_email.error = "email must start have @ and then ."
                     arrValidation[1] = false
                 }
                 else
@@ -91,6 +93,24 @@ class RegisterActivity : BaseActivity(), TextWatcher {
         }
 
     }
+
+    private fun emailValidator(email: String?): Boolean {
+        if(!email.isNullOrEmpty()){
+
+            val trimEmail = email.trim()
+            val pattern: Pattern
+            val matcher: Matcher
+            val EMAIL_PATTERN =
+                    "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
+            pattern = Pattern.compile(EMAIL_PATTERN)
+            matcher = pattern.matcher(trimEmail)
+
+            return matcher.matches()
+        }
+
+        return false
+    }
+
 
 
 }

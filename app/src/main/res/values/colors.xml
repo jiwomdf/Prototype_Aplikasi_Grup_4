@@ -11,6 +11,7 @@
     <color name="red_700">#b50000</color>
     <color name="blue_200">#feffff</color>
     <color name="blue_500">#cbdee2</color>
+    <color name="blue_500_trans">#77cbdee2</color>
     <color name="blue_700">#9aacb0</color>
     <color name="blue_900">#3a7580</color>
     <color name="blue_maps">#4A89F3</color>

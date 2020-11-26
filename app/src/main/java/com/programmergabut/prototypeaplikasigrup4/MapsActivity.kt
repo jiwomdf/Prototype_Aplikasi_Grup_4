@@ -25,11 +25,16 @@ class MapsActivity : AppCompatActivity() {
             map = it
             /*animateCamera()*/
             addPolyLine(it)
+            setListener(it)
         }
 
     }
 
     private fun addPolyLine(map: GoogleMap) {
+
+        /* kiri gede -> dia ke kanan nyerong bawah
+        * kanan gede -> kanan nyerong bawah
+        */
 
         val polyGone1 = map.addPolygon(PolygonOptions()
                 .clickable(true)
@@ -67,9 +72,61 @@ class MapsActivity : AppCompatActivity() {
         polyGone3.fillColor = ContextCompat.getColor(this, R.color.red_500_trans)
         polyGone3.tag = "3"
 
+
+        val polyGone4 = map.addPolygon(PolygonOptions()
+                .clickable(true)
+                .add(LatLng(-6.60580, 106.81060),
+                        LatLng(-6.60575, 106.81065),
+                        LatLng(-6.60570, 106.81060),
+                        LatLng(-6.60575, 106.81055))
+        )
+
+        polyGone4.strokeColor = ContextCompat.getColor(this, R.color.red_700)
+        polyGone4.fillColor = ContextCompat.getColor(this, R.color.red_500_trans)
+
+
+        val polyGone5 = map.addPolygon(PolygonOptions()
+                .clickable(true)
+                .add(LatLng(-6.60563, 106.81050),
+                        LatLng(-6.60558, 106.81055),
+                        LatLng(-6.60553, 106.81050),
+                        LatLng(-6.60558, 106.81045))
+        )
+
+        polyGone5.strokeColor = ContextCompat.getColor(this, R.color.green_700)
+        polyGone5.fillColor = ContextCompat.getColor(this, R.color.green_500_trans)
+
+        val polyGone6 = map.addPolygon(PolygonOptions()
+                .clickable(true)
+                .add(LatLng(-6.60557, 106.81060),
+                        LatLng(-6.60552, 106.81065),
+                        LatLng(-6.60547, 106.81060),
+                        LatLng(-6.60552, 106.81055))
+
+        )
+
+        polyGone6.strokeColor = ContextCompat.getColor(this, R.color.green_700)
+        polyGone6.fillColor = ContextCompat.getColor(this, R.color.green_500_trans)
+        polyGone6.tag = "1"
+
+        val polyGone7 = map.addPolygon(PolygonOptions()
+                .clickable(true)
+                .add(LatLng(-6.60543, 106.81073),
+                        LatLng(-6.60538, 106.81078),
+                        LatLng(-6.60533, 106.81073),
+                        LatLng(-6.60538, 106.81068))
+
+        )
+
+        polyGone7.strokeColor = ContextCompat.getColor(this, R.color.green_700)
+        polyGone7.fillColor = ContextCompat.getColor(this, R.color.green_500_trans)
+        polyGone7.tag = "1"
+
+    }
+
+    private fun setListener(map: GoogleMap) {
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(centerArea, zoomLevel))
         map.setOnPolygonClickListener{
-
             when(it.tag){
                 "1" -> {
                     val intent = Intent(this, Store1Activity::class.java)
@@ -84,10 +141,7 @@ class MapsActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
-
-
         }
-
     }
 
     /* private fun animateCamera() {

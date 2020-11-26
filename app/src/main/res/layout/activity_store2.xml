@@ -20,7 +20,7 @@
             android:textStyle="bold"
             android:text="SALAD KALE"
             android:textColor="@color/black"
-            android:layout_marginTop="66dp"
+            android:layout_marginTop="60dp"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,8 +82,8 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" >
 
             <ImageView
-                android:layout_width="255dp"
-                android:layout_height="190dp"
+                android:layout_width="225dp"
+                android:layout_height="150dp"
                 android:src="@drawable/kale" />
         </androidx.cardview.widget.CardView>
 
@@ -103,7 +103,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Note: Don't Stay too Long"
+            android:text="Reserve soon!"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:textSize="16sp"

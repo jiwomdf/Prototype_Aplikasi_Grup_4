@@ -20,7 +20,7 @@
             android:textStyle="bold"
             android:text="POPOLO COFFEE"
             android:textColor="@color/black"
-            android:layout_marginTop="66dp"
+            android:layout_marginTop="60dp"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +117,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Note: Don't Stay too Long"
+            android:text="Stay healthy!"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:textSize="16sp"

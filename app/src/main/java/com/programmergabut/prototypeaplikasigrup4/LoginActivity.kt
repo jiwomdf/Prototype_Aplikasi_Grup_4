@@ -19,10 +19,14 @@ class LoginActivity : BaseActivity() {
 
     private fun setListener() {
         btn_login.setOnClickListener {
+
             if(et_username.text.toString().toLowerCase(Locale.ROOT).trim() == ID_PASSWORD.toLowerCase(Locale.ROOT) &&
                 et_password.text.toString().toLowerCase(Locale.ROOT).trim() == ID_PASSWORD.toLowerCase(Locale.ROOT)){
                 val intent = Intent(this, MapsActivity::class.java)
                 startActivity(intent)
+            }
+            else if(et_username.text.toString().isEmpty() || et_password.text.toString().isEmpty()){
+                showBottomSheet("Error", "username or password cannot be empty")
             }
             else
                 showBottomSheet("User not found", "username or password is incorrect")

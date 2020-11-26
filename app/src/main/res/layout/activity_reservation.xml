@@ -110,7 +110,7 @@
 
                 <EditText
                     android:id="@+id/et_numberGuest"
-                    android:layout_width="match_parent"
+                    android:layout_width="128dp"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
                     android:singleLine="true"
