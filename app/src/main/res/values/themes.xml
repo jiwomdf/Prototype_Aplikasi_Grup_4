@@ -37,5 +37,11 @@
         <item name="android:textAppearance">@style/TextAppearance.App.Button</item>
         <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
     </style>
-
+    <style name="Theme.PrototypeAplikasiGrup4.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.PrototypeAplikasiGrup4.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.PrototypeAplikasiGrup4.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -20,12 +20,20 @@ import java.util.*
 
 class ReservationActivity : BaseActivity(), TextWatcher {
 
+    companion object {
+        val PLACE_NAME = "place_name"
+    }
+
+
     private var arrValidation = arrayOf(false, false, false, false, false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reservation)
 
+        val placeName = intent.getStringExtra(PLACE_NAME)
+
+        tv_title.text = placeName
         setListener()
     }
 
@@ -41,9 +49,7 @@ class ReservationActivity : BaseActivity(), TextWatcher {
             finish()
         }
         btn_reserve.setOnClickListener{
-            Toast.makeText(this, "Reservation created!", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, MapsActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            val intent = Intent(this, SuccessActivity::class.java)
             startActivity(intent)
         }
         et_date.setOnClickListener{
@@ -128,14 +134,14 @@ class ReservationActivity : BaseActivity(), TextWatcher {
         when(hashCode){
             et_name.text.hashCode() -> {
                 if (et_name.text.toString().length < 2) {
-                    et_name.error = "your name is less than 2"
+                    et_name.error = "name is less than 2"
                     arrValidation[0] = false
                 } else
                     arrValidation[0] = true
             }
             et_phoneNumber.text.hashCode() -> {
                 if (et_phoneNumber.text.toString().length < 9) {
-                    et_phoneNumber.error = "your phone number is less than 9"
+                    et_phoneNumber.error = "phone number is less than 9"
                     arrValidation[1] = false
                 } else
                     arrValidation[1] = true

@@ -12,16 +12,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PrototypeAplikasiGrup4">
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".ReservationActivity" />
-        <activity android:name=".StoreActivity" />
-        <activity android:name=".MapsActivity" >
+        <activity android:name=".Store3Activity"></activity>
+        <activity
+            android:name=".Store2Activity"
+            android:label="@string/title_activity_store2"
+            android:theme="@style/Theme.PrototypeAplikasiGrup4.NoActionBar"></activity>
+        <activity android:name=".SuccessActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ReservationActivity" />
+        <activity android:name=".Store1Activity" />
+        <activity android:name=".MapsActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"
