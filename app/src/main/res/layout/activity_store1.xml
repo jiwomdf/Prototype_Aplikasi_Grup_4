@@ -117,7 +117,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stay healthy!"
+            android:text="Don't stay too long!"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:textSize="16sp"

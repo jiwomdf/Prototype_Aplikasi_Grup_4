@@ -2,6 +2,7 @@ package com.programmergabut.prototypeaplikasigrup4
 
 import android.content.Intent
 import android.os.Bundle
+import com.programmergabut.prototypeaplikasigrup4.ReservationActivity.Companion.PLACE_MSG
 import com.programmergabut.prototypeaplikasigrup4.ReservationActivity.Companion.PLACE_NAME
 import kotlinx.android.synthetic.main.activity_store1.*
 
@@ -18,6 +19,7 @@ class Store1Activity : BaseActivity() {
         btn_reserve.setOnClickListener{
             val intent = Intent(this, ReservationActivity::class.java)
             intent.putExtra(PLACE_NAME, "POPOLO COFFEE")
+            intent.putExtra(PLACE_MSG, "Don't stay too long!")
             startActivity(intent)
         }
     }

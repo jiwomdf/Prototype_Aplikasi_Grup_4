@@ -22,6 +22,7 @@ class ReservationActivity : BaseActivity(), TextWatcher {
 
     companion object {
         val PLACE_NAME = "place_name"
+        val PLACE_MSG = "place_msg"
     }
 
     private var arrValidation = arrayOf(false, false, false, false, false)
@@ -31,8 +32,10 @@ class ReservationActivity : BaseActivity(), TextWatcher {
         setContentView(R.layout.activity_reservation)
 
         val placeName = intent.getStringExtra(PLACE_NAME)
+        val placeMsg = intent.getStringExtra(PLACE_MSG)
 
         tv_title.text = placeName
+        textView3.text = placeMsg
         setListener()
     }
 

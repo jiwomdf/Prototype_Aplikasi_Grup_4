@@ -107,7 +107,6 @@ class MapsActivity : AppCompatActivity() {
 
         polyGone6.strokeColor = ContextCompat.getColor(this, R.color.green_700)
         polyGone6.fillColor = ContextCompat.getColor(this, R.color.green_500_trans)
-        polyGone6.tag = "1"
 
         val polyGone7 = map.addPolygon(PolygonOptions()
                 .clickable(true)
@@ -120,7 +119,6 @@ class MapsActivity : AppCompatActivity() {
 
         polyGone7.strokeColor = ContextCompat.getColor(this, R.color.green_700)
         polyGone7.fillColor = ContextCompat.getColor(this, R.color.green_500_trans)
-        polyGone7.tag = "1"
 
     }
 
