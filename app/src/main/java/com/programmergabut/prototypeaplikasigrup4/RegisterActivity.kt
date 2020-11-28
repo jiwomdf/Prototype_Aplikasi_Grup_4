@@ -60,7 +60,7 @@ class RegisterActivity : BaseActivity(), TextWatcher {
                     arrValidation[1] = false
                 }
                 else if(!emailValidator(et_email.text.toString())){
-                    et_email.error = "email must start have @ and then ."
+                    et_email.error = "email must have @ and ."
                     arrValidation[1] = false
                 }
                 else

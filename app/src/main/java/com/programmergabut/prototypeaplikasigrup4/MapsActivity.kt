@@ -120,6 +120,18 @@ class MapsActivity : AppCompatActivity() {
         polyGone7.strokeColor = ContextCompat.getColor(this, R.color.green_700)
         polyGone7.fillColor = ContextCompat.getColor(this, R.color.green_500_trans)
 
+
+        val polyGone8 = map.addPolygon(PolygonOptions()
+                .clickable(true)
+                .add(LatLng(-6.60566, 106.81063),
+                        LatLng(-6.60561, 106.81068),
+                        LatLng(-6.60556, 106.81063),
+                        LatLng(-6.60561, 106.81058))
+        )
+
+        polyGone8.strokeColor = ContextCompat.getColor(this, R.color.orange_700)
+        polyGone8.fillColor = ContextCompat.getColor(this, R.color.orange_500_trans)
+
     }
 
     private fun setListener(map: GoogleMap) {

@@ -7,7 +7,10 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.programmergabut.prototypeaplikasigrup4.ReservationActivity.Companion.PLACE_MSG
 import com.programmergabut.prototypeaplikasigrup4.ReservationActivity.Companion.PLACE_NAME
+import kotlinx.android.synthetic.main.activity_reservation.*
 import kotlinx.android.synthetic.main.activity_store1.*
+import kotlinx.android.synthetic.main.activity_store1.btn_reserve
+import kotlinx.android.synthetic.main.activity_store1.ic_back
 
 class Store2Activity : AppCompatActivity() {
 
@@ -24,6 +27,10 @@ class Store2Activity : AppCompatActivity() {
             intent.putExtra(PLACE_NAME, "SALAD KALE")
             intent.putExtra(PLACE_MSG, "Reserve soon!")
             startActivity(intent)
+        }
+
+        ic_back.setOnClickListener{
+            finish()
         }
     }
 }

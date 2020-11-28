@@ -7,7 +7,7 @@
     tools:context=".MapsActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="36dp"
         app:cardCornerRadius="8dp"
@@ -19,12 +19,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp">
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:background="@color/white"
                 android:translationZ="99dp"
-                android:text="Select the location to reserve"
+                android:hint="Search Here"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
